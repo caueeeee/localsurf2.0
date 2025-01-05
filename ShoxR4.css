@@ -261,14 +261,14 @@ header {
         scale: 0.65;
         position: absolute;
         margin-top: 0px;
-        left: -120px;
+        left: -130px;
         width: 100%;
 
         & .nome-produto {
             font-size: 2.1em;
             position: absolute;
             top: -80px;
-            left:-80px;
+            left:-90px;
             width: 300px;
         }
 
@@ -277,7 +277,7 @@ header {
             width: 500px;
             position: absolute;
             top: 50px;
-            left: -190px;
+            left: -200px;
         }
 
         & .valores {
@@ -285,21 +285,21 @@ header {
             width: 500px;
             position: absolute;
             top: 150px;
-            left: -190px;
+            left: -200px;
         }
 
         & .parcela {
             font-size: 1.5em;
             position: absolute;
             top: 200px;
-            left: -190px;
+            left: -200px;
         }
 
         & .tamanhos {
             font-size: 1.5em;
             position: absolute;
             top: 300px;
-            left: -190px;
+            left: -200px;
             width: 500px;
         }
 
@@ -307,17 +307,17 @@ header {
             margin-top: 50px;
             position: absolute;
             top: 30px;
-            left: -70px;
+            left: -80px;
         }
 
         & .add-to-carrinho{
             margin-top: 75px;
-            margin-left: -30px;
+            margin-left: -40px;
         }
     }
 
     .container{
-        width: 900px !important;
+        width: 1100px !important;
         margin-left: -100px !important;
     }
 
