@@ -1,0 +1,1059 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Host+Grotesk:ital,wght@0,616;1,616&family=PT+Sans:wght@700&family=Questrial&display=swap');
+
+@font-face {
+    font-family: 'Batangas';
+    /* Nome da fonte para usar no CSS */
+    src: url('fonts/Batangas-Bold-700.woff') format('woff'),
+        url('fonts/Batangas\ Bold\ 700.otf') format('otf');
+    /* Formatos alternativos */
+    font-weight: 400;
+    /* Peso da fonte */
+    font-style: normal;
+    /* Estilo normal */
+}
+
+:root {
+    /* Tipografia */
+    --font-family-primary: "Questrial", serif;
+    --font-weight-normal: 400;
+    --font-style-normal: normal;
+
+    --vermelho: hsl(0, 80%, 48%);
+    --vermelho-fundo: hsl(0, 80%, 48%);
+    --text-shadow: hsl(0 80% 40%) 0px 0px 50px;
+    --box-shadow: rgb(220, 24, 24) 0px 2px 10px 0px;
+
+
+}
+
+/* Responsividade para telas pequenas (celulares) */
+@media screen and (max-width: 768px) {
+
+    .titulo img {
+        width: 30% !important;
+    }
+
+    #backToTop {
+        bottom: 30px;
+        right: 10px;
+        /* Ajustado para não ficar muito à direita */
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    body {
+        font-size: 18px;
+        overflow-x: hidden;
+    }
+
+    .line {
+        margin-left: -130px
+    }
+
+    footer {
+        padding-top: 20px;
+        height: auto;
+        /* Ajusta a altura do rodapé */
+        padding-bottom: 20px;
+        /* Ajusta o espaçamento inferior */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Centraliza o conteúdo */
+    }
+
+    footer p {
+        font-size: 1.2em;
+        /* Ajusta o tamanho da fonte */
+        margin-top: 20px;
+        /* Ajusta o espaçamento superior */
+    }
+
+    .social {
+        flex-direction: column;
+        gap: 20px;
+        /* Adiciona espaçamento entre os itens */
+        padding-top: 20px;
+        /* Ajusta o espaçamento superior */
+    }
+
+    .social li {
+        margin-top: 10px;
+        /* Ajusta o espaçamento superior */
+        margin-bottom: 10px;
+        /* Ajusta o espaçamento inferior */
+    }
+
+    .wtzp {
+        margin-top: 30px;
+    }
+
+    .wtzp::after {
+        bottom: -3px;
+        /* Ajusta a posição da linha */
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1vw;
+        margin-left: 0;
+        padding-top: 20px;
+    }
+
+    .section1,
+    .section2,
+    .section3 {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .prod1,
+    .prod2,
+    .prod3,
+    .prod4,
+    .prod5,
+    .prod6,
+    .prod7,
+    .prod8,
+    .prod9 {
+        width: 50%;
+        height: auto;
+        transform: scale(.8);
+    }
+
+    .prod1:hover,
+    .prod2:hover,
+    .prod3:hover,
+    .prod4:hover,
+    .prod5:hover,
+    .prod6:hover,
+    .prod7:hover,
+    .prod8:hover,
+    .prod9:hover {
+        transform: scale(.85) !important;
+        transition: .5s ease-in-out !important;
+
+    }
+
+    .prod1 img,
+    .prod2 img,
+    .prod3 img,
+    .prod4 img,
+    .prod5 img,
+    .prod6 img,
+    .prod7 img,
+    .prod8 img,
+    .prod9 img {
+        width: 80%;
+    }
+
+    .promo img {
+        opacity: 0;
+    }
+
+    .promocao{
+        margin-bottom: 200px !important;
+    }
+
+    .promo {
+        transform: scale(.5);
+    }
+}
+
+/* Responsividade para telas médias (tablets) */
+@media screen and (max-width: 1024px) {
+
+    .titulo img {
+        width: 30% !important;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    #backToTop {
+        bottom: 40px;
+        right: 20px;
+        /* Ajuste do posicionamento */
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .section1,
+    .section2,
+    .section3 {
+        gap: 50px;
+        padding-top: 100px;
+    }
+
+    .prod1,
+    .prod2,
+    .prod3,
+    .prod4,
+    .prod5,
+    .prod6,
+    .prod7,
+    .prod8,
+    .prod9 {
+        width: 45%;
+        height: auto;
+    }
+
+    .prod1 img,
+    .prod2 img,
+    .prod3 img,
+    .prod4 img,
+    .prod5 img,
+    .prod6 img,
+    .prod7 img,
+    .prod8 img,
+    .prod9 img {
+        width: 90%;
+    }
+
+    footer {
+        padding-top: 40px;
+    }
+
+    .promo img {
+        opacity: 0;
+    }
+}
+
+/* Responsividade para telas grandes (desktops) */
+@media screen and (min-width: 1080px) {
+
+    .titulo img {
+        width: 20% !important;
+    }
+
+    .line {
+        margin-left: 0;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    #backToTop {
+        bottom: 50px;
+        right: 33px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    nav {
+        flex-direction: row;
+    }
+
+    .section1,
+    .section2,
+    .section3 {
+        gap: 100px;
+        padding-top: 150px;
+    }
+
+    .prod1,
+    .prod2,
+    .prod3,
+    .prod4,
+    .prod5,
+    .prod6,
+    .prod7,
+    .prod8,
+    .prod9 {
+        width: 400px;
+        height: 400px;
+    }
+
+    .prod1 img,
+    .prod2 img,
+    .prod3 img,
+    .prod4 img,
+    .prod5 img,
+    .prod6 img,
+    .prod7 img,
+    .prod8 img,
+    .prod9 img {
+        width: 100%;
+    }
+
+    .promo img {
+        opacity: 0;
+    }
+}
+
+
+
+header {
+    width: 100vw;
+    padding-bottom: 25px;
+    background-color: #e7e7e7;
+}
+
+body {
+    font-size: 20px;
+    overflow-x: hidden;
+    background-color: #e7e7e7;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* Distribui os itens do nav igualmente */
+    align-items: center;
+    padding: 30px 20px 0px;
+    /* Ajusta o espaçamento interno */
+    font-family: var(--font-family-primary);
+    width: 100%;
+    gap: 50px;
+    /* Reintroduzi o gap entre os itens da lista */
+}
+
+nav li {
+    list-style: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav li:hover {
+    color: var(--vermelho);
+    text-shadow: hsl(0 80% 40%) 0px 0px 50px;
+    transition: 0.3s ease-in-out;
+}
+
+nav li:active {
+    color: var(--vermelho);
+    text-shadow: hsl(0 80% 40%) 0px 0px 50px;
+}
+
+nav li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--vermelho-fundo);
+    transition: width 0.3s ease;
+}
+
+nav li:hover::after {
+    width: 100%;
+}
+
+/* Estilo dos botões */
+.botoes {
+    padding: 0px 65px 0px;
+    display: flex;
+    /* Menor espaçamento entre os botões */
+    margin-left: auto;
+    /* Move os botões para a direita */
+}
+
+/* Estilo do único botão */
+.botaoum {
+    height: 50px;
+    width: 170px;
+    padding: 10px 20px;
+    /* Mesma margem de padding que o nav */
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+    max-width: 100%;
+    color: black;
+}
+
+.botaoum:hover {
+    background-color: hsl(0, 80%, 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(220, 24, 24) 0px 7px 29px 0px;
+}
+
+.botaoum:active {
+    letter-spacing: 1px;
+    background-color: hsl(0, 80%, 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(220, 24, 24) 0px 2px 10px 0px;
+    transform: translateY(2px);
+    transition: 100ms;
+}
+
+/* Responsividade */
+@media (max-width: 1090px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-left: 0;
+        padding-top: 20px;
+        align-items: center;
+        /* Centraliza os itens no eixo horizontal */
+        justify-content: center;
+        /* Centraliza os itens no eixo vertical */
+        width: 100%;
+        /* Garante que o menu ocupe toda a largura */
+        margin-left: -28px;
+    }
+
+    nav li {
+        font-size: 1.5em;
+        text-align: center;
+        /* Centraliza o texto dos itens de lista */
+        list-style: none;
+        /* Remove marcadores, caso necessário */
+    }
+
+    .botoes {
+        display: flex;
+        justify-content: center;
+        /* Centraliza horizontalmente */
+        align-items: center;
+        /* Centraliza verticalmente */
+        flex-wrap: wrap;
+        /* Permite que os botões se ajustem caso fiquem grandes */
+        width: 100%;
+        /* Garante que o container ocupe toda a largura disponível */
+        margin-top: 1rem;
+        padding: 0;
+    }
+
+    .botaoum {
+        margin: 1rem 0 0 0;
+        /* Remove qualquer margem lateral e ajusta a superior */
+        text-align: center;
+        /* Centraliza o botão em relação ao texto */
+    }
+}
+
+
+
+
+h1,
+p {
+    font-family: 'Batangas';
+    text-align: center;
+    margin-top: -35px;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 4em;
+}
+
+p {
+    font-size: 2em;
+}
+
+.line {
+    padding-left: 30vw;
+    width: 550px;
+}
+
+
+.section1 {
+    display: flex;
+    flex-wrap: wrap;
+    /* Para garantir que os itens se movam para a linha seguinte */
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: vh;
+    position: relative;
+}
+
+.prod1,
+.prod2,
+.prod3,
+.prod4,
+.prod5,
+.prod6,
+.prod7,
+.prod8,
+.prod9 {
+    border: 1px solid black;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    /* Usando flexbox */
+    justify-content: center;
+    /* Alinha a imagem horizontalmente */
+    align-items: center;
+    /* Alinha a imagem verticalmente */
+    transition: transform 1s, border-radius .5s ease-in-out, border .4s ease-in-out, box-shadow .4s ease-in-out;
+    background-color: #a1a1a131;
+    box-shadow: 0px 4px 6px rgb(0, 0, 0);
+
+
+
+    & .like-wrapper {
+        opacity: 0;
+        transition: 1s;
+
+        transform: rotate(-15deg);
+    }
+}
+
+.prod1:hover,
+.prod2:hover,
+.prod3:hover,
+.prod4:hover,
+.prod5:hover,
+.prod6:hover,
+.prod7:hover,
+.prod8:hover,
+.prod9:hover {
+    transform: scale(1.09);
+    /* Adiciona uma transição suave */
+    border-radius: 15px 3px 15px 3px;
+    cursor: pointer;
+    border: solid 1px var(--vermelho);
+    box-shadow: var(--box-shadow);
+
+    background-image: linear-gradient(to top, hsl(0, 0%, 100%)-2%, #a1a1a131 20%);
+
+    & .like-wrapper {
+        opacity: 1;
+        transition: 1s ease-in-out;
+        z-index: 1;
+        top: 5%;
+        transition: 1s ease;
+        transform: rotate(0deg);
+        transition: 1s;
+    }
+}
+
+.prod7 {
+    margin-top: -29px !important;
+}
+
+.zn img {
+    margin-top: -60px !important;
+    width: 200px !important;
+}
+
+.jordanlv img {
+    margin-top: -50px !important;
+}
+
+.jordanlow img {
+    margin-top: -20px !important;
+}
+
+.dunk img {
+    margin-top: -20px;
+}
+
+.shox img {
+    margin-top: -40px !important;
+}
+
+.jordan img {
+    margin-top: -10px !important;
+}
+
+.sb img {
+    margin-top: -30px;
+}
+
+.prod1 img,
+.prod2 img,
+.prod3 img,
+.prod4 img,
+.prod5 img,
+.prod6 img,
+.prod7 img,
+.prod8 img,
+.prod9 img {
+    filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.3));
+    /* Sombra projetada */
+    transition: all 1s ease-in-out;
+    max-width: 100%;
+    height: auto;
+    width: 230px;
+    /* Tamanho da imagem */
+    height: auto;
+    /* Mantém a proporção da imagem */
+}
+
+.prod1 img:hover,
+.prod2 img:hover,
+.prod3 img:hover,
+.prod4 img:hover,
+.prod5 img:hover,
+.prod6 img:hover,
+.prod7 img:hover,
+.prod8 img:hover,
+.prod9 img:hover {
+    transform: rotate(0deg);
+    transition: 1s ease-in-out;
+    transform: scale(1.05);
+    filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.528));
+    /* Sombra projetada */
+}
+
+.prod1 img:active,
+.prod2 img:active,
+.prod3 img:active,
+.prod4 img:active,
+.prod5 img:active,
+.prod6 img:active,
+.prod7 img:active,
+.prod8 img:active,
+.prod9 img:active {
+    transform: rotate(5deg);
+    transition: .5s;
+
+}
+
+.prod1 img {
+    margin-top: -30px;
+}
+
+.prod1:active,
+.prod2:active,
+.prod3:active,
+.prod4:active,
+.prod5:active,
+.prod6:active,
+.prod7:active,
+.prod8:active,
+.prod9:active {
+    transform: scale(1.03);
+    transition: .3s;
+}
+
+.primeiro,
+.segundo,
+.terceiro,
+.quarto,
+.quinto,
+.sexto,
+.setimo,
+.oitavo,
+.nono {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Alinha o conteúdo da div "primeiro" horizontalmente */
+    text-align: center;
+    /* Alinha o texto da tag <p> no centro */
+}
+
+.price1 {
+    margin-top: 30px;
+    /* Adiciona um pequeno espaço entre a imagem e o preço */
+    color: #000000;
+    /* Cor opcional */
+}
+
+.price2 {
+    margin-top: 30px;
+    /* Adiciona um pequeno espaço entre a imagem e o preço */
+    color: #000000;
+    /* Cor opcional */
+}
+
+.price3 {
+    margin-top: 30px;
+    /* Adiciona um pequeno espaço entre a imagem e o preço */
+    color: #000000;
+    /* Cor opcional */
+}
+
+.price4 {
+    margin-top: 30px;
+    /* Adiciona um pequeno espaço entre a imagem e o preço */
+    color: #000000;
+    /* Cor opcional */
+}
+
+.price5 {
+    margin-top: 30px;
+    /* Adiciona um pequeno espaço entre a imagem e o preço */
+    color: #000000;
+    /* Cor opcional */
+}
+
+.price6 {
+    margin-top: 30px;
+    /* Adiciona um pequeno espaço entre a imagem e o preço */
+    color: #000000;
+    /* Cor opcional */
+}
+
+.price7 {
+    margin-top: 30px;
+    /* Adiciona um pequeno espaço entre a imagem e o preço */
+    color: #000000;
+    /* Cor opcional */
+}
+
+.price8 {
+    margin-top: 30px;
+    /* Adiciona um pequeno espaço entre a imagem e o preço */
+    color: #000000;
+    /* Cor opcional */
+}
+
+.price9 {
+    margin-top: 30px;
+    /* Adiciona um pequeno espaço entre a imagem e o preço */
+    color: #000000;
+    /* Cor opcional */
+}
+
+
+.price1,
+.price2,
+.price3,
+.price4,
+.price5,
+.price6,
+.price7,
+.price8,
+.price9 {
+    font-size: 1.7em;
+    font-family: var(--font-family-primary);
+}
+
+.section2 {
+    display: flex;
+    flex-wrap: wrap;
+    /* Para garantir que os itens se movam para a linha seguinte */
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: 100px;
+    position: relative;
+}
+
+.section3 {
+    display: flex;
+    flex-wrap: wrap;
+    /* Para garantir que os itens se movam para a linha seguinte */
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: 100px;
+    position: relative;
+}
+
+.promocao {
+    margin-top: 200px;
+    position: relative;
+    padding-bottom: 450px;
+}
+
+.promo {
+    position: absolute;
+    margin-left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centraliza horizontalmente */
+    display: flex;
+    justify-content: center;
+    /* Alinha os itens no centro */
+    gap: 50px;
+    opacity: 0;
+    /* Inicialmente invisível */
+    transition: opacity 1s ease-in;
+    /* Transição de fade */
+    max-width: 100%;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 100%;
+    color: rgb(0, 0, 0);
+    padding-top: 50px;
+}
+
+.promo.show {
+    opacity: 1;
+    /* Torna visível quando a classe 'show' é adicionada */
+}
+
+.promo span {
+    font-family: var(--font-family-primary);
+    text-transform: uppercase;
+
+}
+
+.login {
+    width: 200px;
+}
+
+footer {
+    list-style: none;
+    color: white;
+    height: auto;
+    width: 100%;
+    /* Garante que o footer ocupe toda a largura da tela */
+    background-color: black;
+    text-align: center;
+    position: relative;
+    /* Garante que o footer se comporte corretamente */
+    margin: 0;
+    /* Remove margens externas, caso haja */
+    padding-top: 30px;
+    /* Remove preenchimento interno, caso haja */
+    font-family: var(--font-family-primary);
+    -webkit-box-shadow: 0px -85px 168px 10px rgba(255, 54, 54, 0.22);
+    -moz-box-shadow: 0px -85px 168px 10px rgba(255, 54, 54, 0.22);
+    box-shadow: 0px -85px 168px 10px rgba(255, 54, 54, 0.22);
+}
+
+footer p {
+    font-family: var(--font-family-primary);
+    font-size: 1.5em;
+    margin-top: 40px;
+}
+
+
+.social {
+    display: flex;
+    gap: 150px;
+    /* Espaçamento entre os itens */
+    justify-content: center;
+    /* Alinha os itens horizontalmente ao centro */
+    padding-top: 10px;
+    /* Distância do topo */
+    letter-spacing: 2px;
+}
+
+.social li {
+    list-style: none;
+    position: relative;
+    /* Necessário para a linha aparecer abaixo do item */
+    margin-bottom: 10px;
+    /* Espaço entre o texto e a linha */
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.social li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    /* Espessura da linha */
+    background-color: white;
+    /* Cor da linha */
+    transition: width 0.5s ease;
+    /* Transição suave para a linha aparecer */
+}
+
+.social li:hover::after {
+    width: 100%;
+    /* A linha vai se expandir para cobrir todo o item ao passar o mouse */
+}
+
+.wtzp {
+    display: inline-block;
+    /* Faz com que o parágrafo se comporte como um bloco em linha */
+    position: relative;
+    /* Necessário para aplicar a linha abaixo */
+    margin-top: 90px;
+    letter-spacing: 2px;
+    /* Adiciona espaçamento entre as letras, se necessário */
+    cursor: pointer;
+}
+
+.wtzp::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    /* Começa invisível */
+    height: 1px;
+    /* Espessura da linha */
+    background-color: white;
+    /* Cor da linha */
+    transition: width 1s ease;
+    /* Transição suave para a linha aparecer */
+}
+
+.wtzp:hover::after {
+    width: 100%;
+    /* A linha se expande para 100% da largura do parágrafo ao passar o mouse */
+}
+
+.titulo {
+    position: relative;
+    background-image: linear-gradient(to bottom, #484848, #e7e7e7 90%);
+    padding-top: 10vh;
+    border-radius: 10px;
+    max-width: 100%;
+    display: block;
+    /* Apenas para garantir o comportamento padrão */
+    text-align: center;
+    /* Centraliza o conteúdo em linha */
+}
+
+.titulo img {
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+    /* Centraliza a imagem */
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.7));
+    /* Sombra uniforme */
+}
+
+
+.linha {
+    position: absolute;
+    left: 35%;
+    /* Move o elemento para o centro do contêiner pai */
+    transform: translateX(-50%);
+    /* Corrige o deslocamento para alinhar o elemento horizontalmente */
+}
+
+/* Estilo do botão */
+#backToTop {
+    position: fixed;
+    bottom: 50px;
+    right: 33px;
+    background-color: var(--vermelho-fundo);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, scale .5s, background-color .5s;
+    z-index: 5;
+}
+
+#backToTop:hover {
+    background-color: var(--vermelho-fundo);
+    scale: 1.05;
+}
+
+/* Exibe o botão quando o usuário rola a página */
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#backToTop:active {
+    scale: 0.9;
+}
+
+/* From Uiverse.io by SalladShooter */
+.like-wrapper {
+    top: 23%;
+    left: 30%;
+    --gap: 0.5em;
+    --radius: 0.35em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    --dot-bg: #212121;
+    --dot-color: #313131;
+    --dot-size: 1px;
+    --dot-space: 22px;
+    background: linear-gradient(90deg,
+            var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+            transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+            transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+    border: 0.1em solid #313131;
+    padding: 0.5em;
+    border-radius: var(--radius);
+    box-shadow: 0 0 1em 0.5em rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: absolute;
+    z-index: -1;
+}
+
+.check[type="checkbox"] {
+    display: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: -0.25em;
+    margin-bottom: -0.25em;
+}
+
+.icon {
+    width: 1.5em;
+    height: 1.5em;
+    margin-left: 0.5em;
+    fill: white;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.icon.active {
+    display: none;
+    fill: #f52121;
+}
+
+.check[type="checkbox"]:checked+.container .icon.active {
+    display: inline-block;
+    animation: wiggle 0.5s ease-in-out;
+}
+
+.check[type="checkbox"]:checked+.container .icon.inactive {
+    display: none;
+}
+
+.like-text {
+    margin-left: 0.5em;
+    padding: 0.5em;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bolder;
+}
+
+@keyframes wiggle {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    75% {
+        transform: rotate(-10deg);
+    }
+}
+
+a{
+    text-decoration: none;
+    color: white !important;
+}

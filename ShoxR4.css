@@ -1,0 +1,1017 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Didact Gothic', sans-serif;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+    overflow-x: hidden !important;
+}
+
+/* From Uiverse.io by Jedi-hongbin */
+button {
+    display: flex;
+    height: 3em;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee4b;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+}
+
+button:active {
+    transform: translateY(3px);
+    transition: ease-in-out 0.2s;
+}
+
+button>svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+}
+
+button:hover>svg {
+    font-size: 1.2em;
+    transform: translateX(-5px);
+}
+
+button:hover {
+    box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+    transform: translateY(-2px);
+}
+
+header {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0;
+    position: relative;
+    width: auto;
+    z-index: 1000;
+    background-color: #e7e7e7;
+}
+
+/* Efeito fade-in */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn .5s ease-in-out forwards;
+}
+
+/* Definindo a animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Host+Grotesk:ital,wght@0,616;1,616&family=PT+Sans:wght@700&family=Questrial&display=swap');
+
+@font-face {
+    font-family: 'Batangas';
+    /* Nome da fonte para usar no CSS */
+    src: url('fonts/Batangas-Bold-700.woff') format('woff'),
+        url('fonts/Batangas\ Bold\ 700.otf') format('otf');
+    /* Formatos alternativos */
+    font-weight: 400;
+    /* Peso da fonte */
+    font-style: normal;
+    /* Estilo normal */
+}
+
+:root {
+    --font-family-primary: "Questrial", serif;
+    --font-weight-normal: 400;
+    --font-style-normal: normal;
+
+    --vermelho: hsl(0, 80%, 48%);
+    --vermelho-fundo: hsl(0, 80%, 48%);
+    --text-shadow: hsl(0 80% 40%) 0px 0px 50px;
+    --box-shadow: rgb(220, 24, 24) 0px 2px 10px 0px;
+}
+
+@media screen and (max-width: 772px) {
+    body{
+        overflow-x: hidden !important;
+    }
+    
+    .infobuy {
+        justify-content: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1vw;
+        margin-left: 0;
+        padding-top: 20px;
+    }
+
+    header {
+        padding-bottom: 25px;
+    }
+
+    #backToTop {
+        bottom: 30px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    footer {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer p {
+        font-size: 1.2em;
+        margin-top: 20px;
+    }
+
+    .social {
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 20px;
+        padding-left: 0;
+    }
+
+    .wtzp {
+        margin-top: 30px;
+    }
+
+    .botaoum {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container {
+        transform: scale(0.8);
+    }
+
+    .infobuy {
+        justify-content: center;
+        transform: scale(0.58);
+    }
+}
+
+@media (max-width: 1160px) {
+    body{
+        overflow-x: hidden !important;
+    }
+
+    .produto img {
+        width: 250px !important;
+    }
+    
+    .infobuy {
+        justify-content: center;
+        scale: 1 !important;
+        position: absolute;
+        margin-top: 0px;
+        left: -280px !important;
+        top: -100px;
+        width: 100%;
+
+        & .nome-produto {
+            font-size: 2.2em;
+            margin-left: 50px;
+            margin-top: 150px;
+        }
+
+        & .avaliacao {
+            font-size: 1.5em;
+            width: 500px;
+            flex-direction: column;
+            text-align: center;
+            gap: 0;
+            margin-top: 100px;
+        }
+
+        & .valores {
+            font-size: 1.5em;
+            width: 300px !important;
+            flex-direction: column;
+            gap: 0;
+            margin-top: 100px;
+            margin-left: 100px;
+            text-align: center;
+        }
+
+        & .parcela{
+            margin-top: 160px;
+            margin-left: 100px;
+        }
+
+        & .tamanhos{
+            gap: 10px;
+            width: 400px !important;
+            margin-top:170px;
+            margin-left: 90px;
+        }
+
+        & .radio-input {
+            margin-top: 70px !important;
+            flex-wrap: wrap;
+            margin-left: 135px;
+            width: 300px;
+            justify-content: center;
+        }
+
+        & .radio-input input{
+            flex: 0 0 calc(33.33% - 10px); /* Cada item ocupa um terço da largura da linha menos o gap */
+        }
+
+        & .add-to-carrinho {
+            margin-top: 220px !important;
+            width: 200px;
+        }
+    }
+
+    .container{
+        margin-right: 0 !important;
+        margin-left: -80px !important;
+    }
+}
+
+@media (max-width: 967.67px) {
+    body{
+        overflow-x: hidden !important;
+    }
+    
+    .infobuy {
+        justify-content: center;
+        scale: 0.65;
+        position: absolute;
+        margin-top: 0px;
+        left: -120px;
+        width: 100%;
+
+        & .nome-produto {
+            font-size: 2.1em;
+            position: absolute;
+            top: -80px;
+            left:-80px;
+            width: 300px;
+        }
+
+        & .avaliacao {
+            font-size: 1.5em;
+            width: 500px;
+            position: absolute;
+            top: 50px;
+            left: -190px;
+        }
+
+        & .valores {
+            font-size: 1.5em;
+            width: 500px;
+            position: absolute;
+            top: 150px;
+            left: -190px;
+        }
+
+        & .parcela {
+            font-size: 1.5em;
+            position: absolute;
+            top: 200px;
+            left: -190px;
+        }
+
+        & .tamanhos {
+            font-size: 1.5em;
+            position: absolute;
+            top: 300px;
+            left: -190px;
+            width: 500px;
+        }
+
+        & .radio-input {
+            margin-top: 50px;
+            position: absolute;
+            top: 30px;
+            left: -70px;
+        }
+
+        & .add-to-carrinho{
+            margin-top: 75px;
+            margin-left: -30px;
+        }
+    }
+
+    .container{
+        width: 900px !important;
+        margin-left: -100px !important;
+    }
+
+    .detail-pictures{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .detail-pictures img{
+        width: 100px !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    footer {
+        padding-top: 20px;
+    }
+
+    .infobuy {
+        justify-content: center;
+    }
+}
+
+
+@media screen and (min-width: 1080px) {
+    .infobuy {
+        justify-content: center;
+    }
+
+    .add-to-carrinho {
+        position: relative;
+        top: 60%;
+        width: 11em;
+        height: 3em;
+        border-radius: 30em;
+        font-size: 1em;
+        font-family: var(--font-family-primary);
+        border: none;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        border: 1px solid #000000;
+        box-shadow: 6px 6px 12px #c5c5c5,
+            -6px -6px 12px #ffffff;
+    }
+
+    .nome-produto {
+        position: absolute;
+        top: 0;
+    }
+
+    nav {
+        flex-direction: row;
+    }
+
+    #backToTop {
+        bottom: 50px;
+        right: 33px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    header {
+        width: 100%;
+        padding-bottom: 25px;
+    }
+}
+
+@media (max-width: 1090px) {
+    nav {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    header {
+        padding-bottom: 25px;
+    }
+
+    nav li {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .botoes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .botaoum {
+        margin-left: 40px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* Distribui os itens do nav igualmente */
+    align-items: center;
+    padding: 30px 20px 0px;
+    /* Ajusta o espaçamento interno */
+    font-family: var(--font-family-primary);
+    width: 100%;
+    gap: 50px;
+    /* Reintroduzi o gap entre os itens da lista */
+}
+
+nav li {
+    list-style: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav li:hover {
+    color: var(--vermelho);
+    text-shadow: hsl(0 80% 40%) 0px 0px 50px;
+    transition: 0.3s ease-in-out;
+}
+
+nav li:active {
+    color: var(--vermelho);
+    text-shadow: hsl(0 80% 40%) 0px 0px 50px;
+}
+
+nav li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--vermelho-fundo);
+    transition: width 0.3s ease;
+}
+
+nav li:hover::after {
+    width: 100%;
+}
+
+/* Estilo dos botões */
+.botoes {
+    padding: 0px 65px 0px;
+    display: flex;
+    /* Menor espaçamento entre os botões */
+    margin-left: auto;
+    /* Move os botões para a direita */
+}
+
+/* Estilo do único botão */
+.botaoum {
+    height: 50px;
+    width: 170px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+    color: black;
+    margin: 0 auto;
+    /* Centraliza o botão horizontalmente */
+    display: block;
+    /* Necessário com 'margin: auto' */
+}
+
+.botaoum:hover {
+    background-color: hsl(0, 80%, 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(220, 24, 24) 0px 7px 29px 0px;
+}
+
+.botaoum:active {
+    letter-spacing: 1px;
+    background-color: hsl(0, 80%, 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(220, 24, 24) 0px 2px 10px 0px;
+    transform: translateY(2px);
+    transition: 100ms;
+}
+
+/* Estilo do botão */
+#backToTop {
+    position: fixed;
+    bottom: 50px;
+    right: 33px;
+    background-color: var(--vermelho-fundo);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, scale .5s, background-color .5s;
+    z-index: 5;
+}
+
+#backToTop:hover {
+    background-color: var(--vermelho-fundo);
+    scale: 1.05;
+}
+
+/* Exibe o botão quando o usuário rola a página */
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#backToTop:active {
+    scale: 0.9;
+}
+
+footer {
+    list-style: none;
+    color: white;
+    height: auto;
+    width: 100%;
+    /* Garante que o footer ocupe toda a largura da tela */
+    background-color: black;
+    text-align: center;
+    position: relative;
+    /* Garante que o footer se comporte corretamente */
+    margin: 0;
+    /* Remove margens externas, caso haja */
+    padding-top: 30px;
+    /* Remove preenchimento interno, caso haja */
+    font-family: var(--font-family-primary);
+    -webkit-box-shadow: 0px -85px 168px 10px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px -85px 168px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0px -85px 168px 10px rgba(0, 0, 0, 0.22);
+}
+
+footer p {
+    font-family: var(--font-family-primary);
+    font-size: 1.5em;
+    margin-top: 0px;
+}
+
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    /* Espaçamento reduzido entre os itens */
+    padding-top: 10px;
+    letter-spacing: 2px;
+}
+
+.social li {
+    list-style: none;
+    position: relative;
+    cursor: pointer;
+    margin: 0;
+    /* Remove margens extras */
+    padding: 0;
+    /* Remove preenchimentos extras */
+}
+
+.social li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    height: 1px;
+    background-color: white;
+    transition: opacity 0.5s;
+}
+
+.social li:hover::after {
+    width: 100%;
+    opacity: 1;
+}
+
+
+.wtzp {
+    display: inline-block;
+    /* Faz com que o parágrafo se comporte como um bloco em linha */
+    position: relative;
+    /* Necessário para aplicar a linha abaixo */
+    margin-top: 90px;
+    letter-spacing: 2px;
+    /* Adiciona espaçamento entre as letras, se necessário */
+    cursor: pointer;
+}
+
+.wtzp::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    /* Começa invisível */
+    height: 1px;
+    /* Espessura da linha */
+    background-color: white;
+    /* Cor da linha */
+    transition: width 1s ease;
+    /* Transição suave para a linha aparecer */
+}
+
+.wtzp:hover::after {
+    width: 100%;
+    /* A linha se expande para 100% da largura do parágrafo ao passar o mouse */
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.radio {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.radio>input {
+    position: absolute;
+    appearance: none;
+}
+
+.radio>label {
+    cursor: pointer;
+    font-size: 30px;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.radio>label>svg {
+    fill: #666;
+    transition: fill 0.3s ease;
+}
+
+.radio>label::before,
+.radio>label::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #ff9e0b;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0);
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+    animation: particle-explosion 1s ease-out;
+}
+
+.radio>label::before {
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+}
+
+.radio>label::after {
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+}
+
+.radio>label:hover::before,
+.radio>label:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.5);
+}
+
+.radio>label:hover {
+    transform: scale(1.2);
+    animation: pulse 0.6s infinite alternate;
+}
+
+/* Star glow and animation on hover */
+.radio>label:hover>svg {
+    fill: #ff9e0b;
+    filter: drop-shadow(0 0 15px rgba(255, 158, 11, 0.9));
+    animation: shimmer 1s ease infinite alternate;
+}
+
+.radio>input:checked+label>svg {
+    fill: #ff9e0b;
+    filter: drop-shadow(0 0 15px rgba(255, 158, 11, 0.9));
+    animation: pulse 0.8s infinite alternate;
+}
+
+.radio>input:checked+label~label>svg,
+.radio>input:checked+label>svg {
+    fill: #ff9e0b;
+    /* Highlight the stars */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes particle-explosion {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        filter: drop-shadow(0 0 10px rgba(255, 158, 11, 0.5));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 20px rgba(255, 158, 11, 1));
+    }
+}
+
+.radio>input:checked+label:hover,
+.radio>input:checked+label:hover~label {
+    fill: #e58e09;
+}
+
+.radio>label:hover,
+.radio>label:hover~label {
+    fill: #ff9e0b;
+}
+
+.radio input:checked~label svg {
+    fill: #ffa723;
+}
+
+.container {
+    background-image: linear-gradient(to right, #a1a1a131, white 1%);
+    height: 70vh;
+    width: auto;
+    display: flex;
+    gap: 300px;
+    justify-content: center;
+    margin-top: 100px;
+    margin-inline: 100px;
+    margin-bottom: 100px;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 10px 39px 0px rgba(62, 66, 66, 0.22);
+    -moz-box-shadow: 0px 10px 39px 0px rgba(62, 66, 66, 0.22);
+    box-shadow: 0px 10px 39px 0px rgba(62, 66, 66, 0.22);
+}
+
+.produto {
+    background-color: #a1a1a131;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.infobuy {
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.produto img {
+    width: 400px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+
+.nome-produto {
+    font-size: 2.5em;
+    font-family: Batangas;
+    color: black;
+    position: absolute;
+    left: -50px;
+}
+
+.avaliacao {
+    display: flex;
+    gap: 80px;
+    margin-top: 10px;
+    position: absolute;
+    top: 25%;
+    left: -120px;
+    font-family: var(--font-family-primary);
+    font-size: 1.3em;
+}
+
+.valores {
+    font-family: var(--font-family-primary);
+    font-size: 1.3em;
+    position: absolute;
+    left: -120px;
+    top: 40%;
+    display: flex;
+    gap: 50px;
+}
+
+.int {
+    color: grey;
+    text-decoration: line-through 2px solid grey;
+}
+
+.valores .off {
+    color: var(--vermelho);
+}
+
+.parcela {
+    font-size: 1.3em;
+    font-family: var(--font-family-primary);
+    position: absolute;
+    top: 48%;
+    left: -120px;
+}
+
+.tamanhos {
+    display: flex;
+    gap: 70px;
+    font-size: 1.3em;
+    font-family: var(--font-family-primary);
+    position: absolute;
+    top: 65%;
+    left: -120px;
+}
+
+.tamanhos a {
+    color: black;
+    z-index: 999;
+    text-decoration: underline 1px solid var(--vermelho);
+}
+
+.opcoes {
+    font-size: 1em;
+    position: absolute;
+    top: 75%;
+    left: -135px;
+}
+
+.radio-input {
+    font-family: var(--font-family-primary);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    color: white;
+}
+
+.radio-input input[type="radio"] {
+    display: none;
+}
+
+.radio-input label {
+    width: 50px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #212121;
+    border-radius: 5px;
+    margin-right: 12px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.radio-input label:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    transition: all 0.3s ease-in-out;
+}
+
+.radio-input input[type="radio"]:checked+label:before {
+    background-color: var(--vermelho);
+    top: 0;
+}
+
+.radio-input input[type="radio"]:checked+label {
+    background-color: var(--vermelho);
+    color: #fff;
+    border-color: var(--vermelho);
+    box-shadow: var(--box-shadow);
+    animation: radio-translate 0.5s ease-in-out;
+}
+
+@keyframes radio-translate {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.add-to-carrinho {
+    position: absolute;
+    top: 60.5%;
+    width: 11em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 1em;
+    font-family: var(--font-family-primary);
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid #000000;
+    box-shadow: 6px 6px 12px #c5c5c5,
+        -6px -6px 12px #ffffff;
+}
+
+.add-to-carrinho::before {
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+.add-to-carrinho:hover::before {
+    width: 11em;
+}
+
+.add-to-carrinho:active {
+    transform: translateY(3px);
+    transition: ease-in-out .2s;
+}
+
+.voltar:active {
+    transform: translateY(3px);
+    transition: ease-in-out .2s;
+}
+
+.detail-pictures img{
+    width: 130px;
+    transition : transform 0.5s ease-in-out;
+
+}
+
+.detail-pictures img:hover{
+    transform: scale(1.1);
+}
