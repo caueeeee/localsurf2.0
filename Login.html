@@ -1,6 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+    <link rel="website icon" type="png" href="Logo/Logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
     <link rel="stylesheet" href="Login.css">
 </head>
+
 <body>
 
     <img class="fundo" src="BackgroundLogin/back.jpg" alt="">
@@ -20,7 +28,7 @@
                 <input type="email" placeholder="Email">
                 <input type="password" placeholder="Senha">
                 <br>
-                    <button class="criar" id="btn-entrar">Entrar</button>
+                <button class="criar" id="btn-entrar">Entrar</button>
             </form>
         </div>
         <div class="form-container sign-in">
@@ -58,14 +66,16 @@
     <script src="Loginfd.js"></script>
     <script src="LogIn.js"></script>
     <script>
-        document.getElementById('btn-entrar').addEventListener('click', function(event) {
+        document.getElementById('btn-entrar').addEventListener('click', function (event) {
             event.preventDefault(); // Evita o recarregamento da página
             window.location.href = 'index.html'; // Redireciona para o arquivo
         });
 
-        document.getElementById('btn-logIn').addEventListener('click', function(event) {
+        document.getElementById('btn-logIn').addEventListener('click', function (event) {
             event.preventDefault(); // Evita o recarregamento da página
             window.location.href = 'index.html'; // Redireciona para o arquivo
         });
     </script>
 </body>
+
+</html>
