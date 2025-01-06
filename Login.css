@@ -14,11 +14,13 @@
 
 }
 
-.fundo{
+.fundo {
     position: absolute;
     left: 3%;
     width: 32%;
+    filter: drop-shadow(2px 2px 100px rgba(255, 0, 0, 0.5));
 }
+
 
 * {
     margin: 0;
@@ -39,7 +41,7 @@ body {
 
 body.fade-in {
     opacity: 1;
-  }
+}
 
 .container {
     background-color: #fff;
@@ -52,6 +54,7 @@ body.fade-in {
     width: 768px;
     max-width: 100%;
     min-height: 480px;
+    border: 1px solid white;
 }
 
 .container p {
@@ -289,7 +292,7 @@ button:active {
     content: '';
     /* Cria o pseudo-elemento */
     position: absolute;
-    bottom: -3;
+    bottom: -0;
     /* Posiciona a linha abaixo do texto */
     left: 0;
     /* Começa do lado esquerdo */
