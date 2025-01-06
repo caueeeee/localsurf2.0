@@ -157,7 +157,7 @@ html {
         opacity: 0;
     }
 
-    .promocao{
+    .promocao {
         margin-bottom: 200px !important;
     }
 
@@ -303,7 +303,13 @@ body {
     font-size: 20px;
     overflow-x: hidden;
     background-color: #e7e7e7;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
 }
+
+body.fade-in {
+    opacity: 1;
+  }
 
 nav {
     display: flex;
@@ -496,7 +502,7 @@ p {
     /* Alinha a imagem horizontalmente */
     align-items: center;
     /* Alinha a imagem verticalmente */
-    transition: transform 1s, border-radius .5s ease-in-out, border .4s ease-in-out, box-shadow .4s ease-in-out;
+    transition: transform 1s cubic-bezier(0.8, 0.09, 0.12, 1.12), border-radius .5s ease-in-out, border .4s ease-in-out, box-shadow .4s ease-in-out;
     background-color: #a1a1a131;
     box-shadow: 0px 4px 6px rgb(0, 0, 0);
 
@@ -757,9 +763,9 @@ p {
 }
 
 .promocao {
-    margin-top: 200px;
+    margin-top: 250px;
     position: relative;
-    padding-bottom: 450px;
+    padding-bottom: 250px;
 }
 
 .promo {
@@ -828,23 +834,22 @@ footer p {
 
 .social {
     display: flex;
-    gap: 150px;
-    /* Espaçamento entre os itens */
     justify-content: center;
-    /* Alinha os itens horizontalmente ao centro */
+    align-items: center;
+    gap: 50px;
+    /* Espaçamento reduzido entre os itens */
     padding-top: 10px;
-    /* Distância do topo */
     letter-spacing: 2px;
 }
 
 .social li {
     list-style: none;
     position: relative;
-    /* Necessário para a linha aparecer abaixo do item */
-    margin-bottom: 10px;
-    /* Espaço entre o texto e a linha */
-    margin-top: 30px;
     cursor: pointer;
+    margin: 0;
+    /* Remove margens extras */
+    padding: 0;
+    /* Remove preenchimentos extras */
 }
 
 .social li::after {
@@ -852,18 +857,16 @@ footer p {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 0%;
+    width: 100%;
+    opacity: 0;
     height: 1px;
-    /* Espessura da linha */
     background-color: white;
-    /* Cor da linha */
-    transition: width 0.5s ease;
-    /* Transição suave para a linha aparecer */
+    transition: opacity 0.5s;
 }
 
 .social li:hover::after {
     width: 100%;
-    /* A linha vai se expandir para cobrir todo o item ao passar o mouse */
+    opacity: 1;
 }
 
 .wtzp {
@@ -888,7 +891,7 @@ footer p {
     /* Espessura da linha */
     background-color: white;
     /* Cor da linha */
-    transition: width 1s ease;
+    transition: width 1s cubic-bezier(0.8, 0.09, 0.12, 1.12);
     /* Transição suave para a linha aparecer */
 }
 
@@ -1053,7 +1056,7 @@ footer p {
     }
 }
 
-a{
+a {
     text-decoration: none;
     color: white !important;
 }

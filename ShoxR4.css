@@ -322,7 +322,7 @@ header {
     .container{
         width: 900px !important;
         margin-left: -100px !important;
-        height: 670px !important;
+        height: 700px !important;
     }
 
     .detail-pictures{
@@ -794,7 +794,7 @@ footer a {
 
 .container {
     background-image: linear-gradient(to right, #a1a1a131, white 1%);
-    height: 70vh;
+    height: 90vh;
     width: auto;
     display: flex;
     gap: 300px;
@@ -819,6 +819,7 @@ footer a {
     position: relative;
     flex-wrap: wrap;
     width: 100%;
+    margin-left: -50px;
 }
 
 .produto img {
@@ -967,7 +968,7 @@ footer a {
 
 .add-to-carrinho {
     position: absolute;
-    top: 60.5%;
+    top: 63%;
     width: 11em;
     height: 3em;
     border-radius: 30em;
