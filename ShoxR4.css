@@ -1013,8 +1013,6 @@ footer a {
 
 .detail-pictures img{
     width: 130px;
-    transition : transform 0.5s ease-in-out;
-
 }
 
 .detail-pictures img:hover{
