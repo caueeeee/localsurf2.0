@@ -794,7 +794,7 @@ footer a {
 
 .container {
     background-image: linear-gradient(to right, #a1a1a131, white 1%);
-    height: 97vh;
+    height: 140vh;
     width: auto;
     display: flex;
     gap: 300px;
@@ -823,7 +823,7 @@ footer a {
 }
 
 .produto img {
-    width: 400px;
+    width: 350px;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 
@@ -903,6 +903,7 @@ footer a {
     flex-direction: row;
     gap: 20px;
     color: white;
+    flex-wrap: wrap;
 }
 
 .radio-input input[type="radio"] {
@@ -968,7 +969,7 @@ footer a {
 
 .add-to-carrinho {
     position: absolute;
-    top: 63%;
+    top: 75%;
     width: 11em;
     height: 3em;
     border-radius: 30em;
@@ -1017,4 +1018,9 @@ footer a {
 
 .detail-pictures img:hover{
     transform: scale(1.1);
+}
+
+.detail-pictures{
+    display: flex;
+    justify-content: center;
 }
