@@ -842,7 +842,7 @@ footer a {
     gap: 80px;
     margin-top: 10px;
     position: absolute;
-    top: 25%;
+    top: 15%;
     left: -120px;
     font-family: var(--font-family-primary);
     font-size: 1.3em;
@@ -853,7 +853,7 @@ footer a {
     font-size: 1.3em;
     position: absolute;
     left: -120px;
-    top: 40%;
+    top: 25%;
     display: flex;
     gap: 50px;
 }
@@ -871,8 +871,9 @@ footer a {
     font-size: 1.3em;
     font-family: var(--font-family-primary);
     position: absolute;
-    top: 48%;
-    left: -120px;
+    top: 29%;
+    left: -0px;
+    text-align: center;
 }
 
 .tamanhos {
@@ -881,8 +882,8 @@ footer a {
     font-size: 1.3em;
     font-family: var(--font-family-primary);
     position: absolute;
-    top: 65%;
-    left: -120px;
+    top: 40%;
+    left: -0px;
 }
 
 .tamanhos a {
@@ -892,10 +893,13 @@ footer a {
 }
 
 .opcoes {
+    max-width: 500px;
     font-size: 1em;
     position: absolute;
-    top: 75%;
+    top: 45%;
     left: -135px;
+    display: flex;
+    text-align: center;
 }
 
 .radio-input {
@@ -970,7 +974,7 @@ footer a {
 
 .add-to-carrinho {
     position: absolute;
-    top: 75%;
+    top: 45%;
     width: 11em;
     height: 3em;
     border-radius: 30em;
