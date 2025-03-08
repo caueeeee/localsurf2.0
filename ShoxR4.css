@@ -102,7 +102,7 @@ header {
     --box-shadow: rgb(220, 24, 24) 0px 2px 10px 0px;
 }
 
-<<<<<<< HEAD
+
 @media screen and (max-width: 768px) {
     body {
         overflow-x: hidden !important;
@@ -136,6 +136,7 @@ header {
         .parcela{
             width: 180px;
             margin: 0 auto;
+            text-align: center;
         }
 
         .tamanhos{
@@ -147,7 +148,7 @@ header {
     .avaliacao{
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 10px !important;
         align-items: center;
     }
 
@@ -205,26 +206,10 @@ header {
 
     
 }
-=======
-.container {
-    width: 900px;
-    margin-left: -100px;
-    height: 700px;
-}
 
-.detail-pictures {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    align-items: center;
-    flex-direction: row;
-}
 
-.detail-pictures img {
-    width: 100px;
-}
 
->>>>>>> 953794ba341bcd9ed11d92d5122ff82c345f4f25
+
 
 nav {
     display: flex;
@@ -393,6 +378,7 @@ footer p {
     /* Espaçamento reduzido entre os itens */
     padding-top: 10px;
     letter-spacing: 2px;
+    padding-left: 0;
 }
 
 .social li {
@@ -677,10 +663,13 @@ footer a {
 }
 
 .tamanhos {
-    width: 215px;
+    width: 255px;
+    text-align: center;
     margin: 0 auto;
     font-size: 1.3em;
     font-family: var(--font-family-primary);
+    background-color: hsla(0, 80%, 48%, 0.278);
+    border-radius: 10px;
 }
 
 .tamanhos a {
@@ -812,6 +801,7 @@ footer a {
     display: flex;
     justify-content: center;
     gap: 80px;
+    cursor: pointer;
 }
 
 .detail-pictures img {
@@ -820,40 +810,4 @@ footer a {
 
 .detail-pictures img:hover {
     transform: scale(1.1);
-}
-
-@media only screen and (max-width: 768px){
-    container{
-        position: relative;
-    }
-
-    .produto{
-        background-color: transparent;
-        display: flex;
-        flex-direction: column;
-        margin-left: 100px;
-    }
-    
-    .produto .prod-img{
-        width: 150px !important;
-        margin-left: 50px;
-    }
-
-    .produto span{
-        flex-direction: column;
-    }
-
-    .detail-pictures img{
-        width: 100px !important;
-    }
-
-    .detail-pictures{
-        margin-left:50px ;
-    }
-
-
-    .infobuy{
-        margin-left: -150px;
-    }
-   
 }
