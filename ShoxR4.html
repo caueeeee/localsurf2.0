@@ -45,12 +45,13 @@
 
 
     <div class="container">
-        <div class="produto"> <img src="Carrossel início/Shox R4 branco.png" alt="Nike Shox R4">
+        <div class="produto"> <span class="image-1"> <img id="imagem-principal" class="picture-product imagem-principal" src="Carrossel início/Shox R4 branco.png" alt="Nike Shox R4"></span>
             <hr>
             <span class="detail-pictures">
-                <img src="Carrossel início/R41.png" alt="">
-                <img src="Carrossel início/R42.png" alt="">
-                <img src="Carrossel início/R43.png" alt="">
+                <img class="miniatura" src="Carrossel início/R41.png" alt="" onclick="trocarImagem(this)">
+                <img class="miniatura" src="Carrossel início/R42.png" alt="" onclick="trocarImagem(this)">
+                <img class="miniatura" src="Carrossel início/R43.png" alt="" onclick="trocarImagem(this)">
+                <img class="miniatura" src="Carrossel início/Shox R4 branco.png" onclick="trocarImagem(this)">
             </span>
         </div>
 
@@ -122,7 +123,7 @@
 
 
             <p class="parcela">
-                <span> Ou 12x de R$ 16,66 <br> sem juros</span>
+                <span> Ou 12x de R$ 16,66 sem juros</span>
             </p>
             <br>
 
@@ -277,6 +278,7 @@
 
     <script src="fadeR4.js"></script>
     <script src="totop.js"></script>
+    <script src="images.js"></script>
 </body>
 
 </html>

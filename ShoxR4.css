@@ -102,13 +102,73 @@ header {
     --box-shadow: rgb(220, 24, 24) 0px 2px 10px 0px;
 }
 
-@media screen and (max-width: 772px) {
+@media screen and (max-width: 768px) {
     body {
         overflow-x: hidden !important;
     }
 
-    .infobuy {
+    .produto{
+        max-width: 450px !important;
+    }
+
+    .infobuy{
+        .radio-input{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .radio-input label{
+            width: 30px;
+            margin: 0 auto;
+        }
+
+        .valores{
+            font-size: 1em;
+            display: flex;
+            flex-wrap: wrap;
+            margin-inline: 20px;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .parcela{
+            width: 180px;
+            margin: 0 auto;
+        }
+
+        .tamanhos{
+            width: 215px;
+            margin: 0 auto;
+        }
+    }
+
+    .avaliacao{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .image-1{
+        display: flex;
+        margin: auto;
+    }
+    .image-1 img{
+        max-width: 200px;
+        margin: auto;
+    }
+
+    .detail-pictures{
+        display: flex;
+        align-items: center;
         justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .produto .detail-pictures img{
+        max-width: 100px;
     }
 
     nav {
@@ -142,294 +202,7 @@ header {
         margin-top: 20px;
     }
 
-    .social {
-        flex-direction: column;
-        gap: 20px;
-        padding-top: 20px;
-        padding-left: 0;
-    }
-
-    .wtzp {
-        margin-top: 30px;
-    }
-
-    .botaoum {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 1rem;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .container {
-        transform: scale(0.8);
-    }
-
-    .infobuy {
-        justify-content: center;
-        transform: scale(0.58);
-    }
-}
-
-@media (max-width: 1160px) {
-    body {
-        overflow-x: hidden !important;
-    }
-
-    .produto img {
-        width: 250px !important;
-    }
-
-    .infobuy {
-        justify-content: center;
-        scale: 1 !important;
-        position: absolute;
-        margin-top: 0px;
-        left: -280px !important;
-        top: -100px;
-        width: 100%;
-
-        & .nome-produto {
-            font-size: 2.2em;
-            margin-left: 50px;
-            margin-top: 150px;
-        }
-
-        & .avaliacao {
-            font-size: 1.5em;
-            width: 500px;
-            flex-direction: column;
-            text-align: center;
-            gap: 0;
-            margin-top: 100px;
-        }
-
-        & .valores {
-            font-size: 1.5em;
-            width: 300px !important;
-            flex-direction: column;
-            gap: 0;
-            margin-top: 100px;
-            margin-left: 100px;
-            text-align: center;
-        }
-
-        & .parcela {
-            margin-top: 160px;
-            margin-left: 100px;
-        }
-
-        & .tamanhos {
-            gap: 10px;
-            width: 400px !important;
-            margin-top: 170px;
-            margin-left: 90px;
-        }
-
-        & .radio-input {
-            margin-top: 70px !important;
-            flex-wrap: wrap;
-            margin-left: 135px;
-            width: 300px;
-            justify-content: center;
-        }
-
-        & .radio-input input {
-            flex: 0 0 calc(33.33% - 10px);
-            /* Cada item ocupa um terço da largura da linha menos o gap */
-        }
-
-        & .add-to-carrinho {
-            margin-top: 220px !important;
-            width: 200px;
-        }
-    }
-
-    .container {
-        margin-right: 0 !important;
-        margin-left: -80px !important;
-    }
-}
-
-@media (max-width: 967.67px) {
-    body {
-        overflow-x: hidden !important;
-    }
-
-    .infobuy {
-        justify-content: center;
-        scale: 0.65;
-        position: absolute;
-        margin-top: 0px;
-        left: -160px;
-        width: 100%;
-
-        & .nome-produto {
-            font-size: 2.1em;
-            position: absolute;
-            top: -80px;
-            left: -130px;
-            width: 300px;
-        }
-
-        & .avaliacao {
-            font-size: 1.5em;
-            width: 500px;
-            position: absolute;
-            top: 50px;
-            left: -210px;
-        }
-
-        & .valores {
-            font-size: 1.5em;
-            width: 500px;
-            position: absolute;
-            top: 150px;
-            left: -222px;
-        }
-
-        & .parcela {
-            text-align: center;
-            display: flex;
-            font-size: 1.5em;
-            position: absolute;
-            top: 200px;
-            left: -178px;
-            align-items: center;
-        }
-
-        & .tamanhos {
-            font-size: 1.5em;
-            position: absolute;
-            top: 300px;
-            left: -190px;
-            width: 500px;
-        }
-
-        & .radio-input {
-            margin-top: 50px;
-            position: absolute;
-            top: 30px;
-            left: -115px;
-        }
-
-        & .add-to-carrinho {
-            margin-top: 75px;
-            margin-left: -60px;
-        }
-    }
-
-    .container {
-        width: 900px !important;
-        margin-left: -100px !important;
-        height: 700px !important;
-    }
-
-    .detail-pictures {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .detail-pictures img {
-        width: 100px !important;
-    }
-}
-
-@media (max-width: 1024px) {
-    footer {
-        padding-top: 20px;
-    }
-
-    .infobuy {
-        justify-content: center;
-    }
-}
-
-
-@media screen and (min-width: 1080px) {
-    .infobuy {
-        justify-content: center;
-    }
-
-    .add-to-carrinho {
-        position: relative;
-        top: 60%;
-        width: 11em;
-        height: 3em;
-        border-radius: 30em;
-        font-size: 1em;
-        font-family: var(--font-family-primary);
-        border: none;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-        border: 1px solid #000000;
-        box-shadow: 6px 6px 12px #c5c5c5,
-            -6px -6px 12px #ffffff;
-    }
-
-    .nome-produto {
-        position: absolute;
-        top: 0;
-    }
-
-    nav {
-        flex-direction: row;
-    }
-
-    #backToTop {
-        bottom: 50px;
-        right: 33px;
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
-    }
-
-    header {
-        width: 100%;
-        padding-bottom: 25px;
-    }
-}
-
-@media (max-width: 1090px) {
-    nav {
-        flex-direction: column;
-        gap: 1.5rem;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        margin-left: 0px;
-    }
-
-    header {
-        padding-bottom: 25px;
-    }
-
-    nav li {
-        font-size: 1.5em;
-        text-align: center;
-    }
-
-    .botoes {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        width: 100%;
-        margin-top: 1rem;
-    }
-
-    .botaoum {
-        margin-left: 40px !important;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
+    
 }
 
 nav {
@@ -484,9 +257,14 @@ nav li:hover::after {
     padding: 0px 65px 0px;
     display: flex;
     /* Menor espaçamento entre os botões */
-    margin-left: auto;
     /* Move os botões para a direita */
 }
+
+hr{
+    max-width: 70%;
+    height: 1px; 
+    border: none;/* Espessura da linha */
+    background-color: var(--vermelho);}
 
 /* Estilo do único botão */
 .botaoum {
@@ -794,14 +572,16 @@ footer a {
 }
 
 .container {
+    
+
+
+    gap: 0;
     background-image: linear-gradient(to right, #a1a1a131, white 1%);
-    height: 97vh;
+    height: auto;
     width: auto;
     display: flex;
-    gap: 300px;
     justify-content: center;
     margin-top: 100px;
-    margin-inline: 100px;
     margin-bottom: 100px;
     border-radius: 15px;
     -webkit-box-shadow: 0px 10px 39px 0px rgba(62, 66, 66, 0.22);
@@ -810,9 +590,14 @@ footer a {
 }
 
 .produto {
+    width: 95%;
     background-color: #a1a1a131;
     border-radius: 15px;
-    padding: 25px;
+}
+
+.image-1{
+    display: flex;
+    justify-content: center;
 }
 
 .infobuy {
@@ -820,7 +605,6 @@ footer a {
     position: relative;
     flex-wrap: wrap;
     width: 100%;
-    margin-left: -50px;
 }
 
 .produto img {
@@ -830,30 +614,27 @@ footer a {
 
 
 .nome-produto {
-    font-size: 2.5em;
+    font-size: 2.0em;
     font-family: Batangas;
     color: black;
-    position: absolute;
-    left: -50px;
+    width: 209px;
+    margin: 0 auto;
+    margin-top: 50px;
 }
 
 .avaliacao {
+    justify-content: center;
+    gap: 100px;
     display: flex;
-    gap: 80px;
-    margin-top: 10px;
-    position: absolute;
-    top: 25%;
-    left: -120px;
     font-family: var(--font-family-primary);
     font-size: 1.3em;
+    flex-wrap: wrap;
 }
 
 .valores {
+    justify-content: center;
     font-family: var(--font-family-primary);
     font-size: 1.3em;
-    position: absolute;
-    left: -120px;
-    top: 40%;
     display: flex;
     gap: 50px;
 }
@@ -868,21 +649,17 @@ footer a {
 }
 
 .parcela {
+    width: 300px;
+    margin: 0 auto;
     font-size: 1.3em;
     font-family: var(--font-family-primary);
-    position: absolute;
-    top: 48%;
-    left: -120px;
 }
 
 .tamanhos {
-    display: flex;
-    gap: 70px;
+    width: 215px;
+    margin: 0 auto;
     font-size: 1.3em;
     font-family: var(--font-family-primary);
-    position: absolute;
-    top: 65%;
-    left: -120px;
 }
 
 .tamanhos a {
@@ -893,9 +670,6 @@ footer a {
 
 .opcoes {
     font-size: 1em;
-    position: absolute;
-    top: 75%;
-    left: -135px;
 }
 
 .radio-input {
@@ -904,6 +678,8 @@ footer a {
     flex-direction: row;
     gap: 20px;
     color: white;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .radio-input input[type="radio"] {
@@ -968,8 +744,7 @@ footer a {
 }
 
 .add-to-carrinho {
-    position: absolute;
-    top: 63%;
+    margin: 0 auto;
     width: 11em;
     height: 3em;
     border-radius: 30em;
@@ -1010,6 +785,12 @@ footer a {
 .voltar:active {
     transform: translateY(3px);
     transition: ease-in-out .2s;
+}
+
+.detail-pictures{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
 }
 
 .detail-pictures img {
