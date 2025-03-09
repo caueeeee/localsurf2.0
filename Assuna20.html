@@ -45,11 +45,12 @@
 
 
     <div class="container">
-        <div class="produto"> <img src="Carrossel início/Assuna2.0.png" alt="Nike Shox R4">
+        <div class="produto"> <span class="picture-product"> <img id="imagem-principal" class="imagem-principal" src="Carrossel início/Assuna2.0.png" alt="Nike Assuna 2.0"></span>
             <hr>
             <span class="detail-pictures">
-                <img src="Carrossel início/Assuna2.0 1.png" alt="">
-                <img src="Carrossel início/Assuna 2.0 2.png" alt="">
+                <img class="miniatura" src="Carrossel início/Assuna2.0 1.png" alt="" onclick="trocarImagem(this)">
+                <img class="miniatura" src="Carrossel início/Assuna 2.0 2.png" alt="" onclick="trocarImagem(this)">
+                <img class="miniatura" src="Carrossel início/Assuna2.0.png" alt="" onclick="trocarImagem(this)">
             </span>
         </div>
 
@@ -121,7 +122,7 @@
 
 
             <p class="parcela">
-                <span> Ou 12x de R$ 11,66 <br> sem juros</span>
+                <span> Ou 12x de R$ 11,66 sem juros</span>
             </p>
             <br>
 
@@ -240,12 +241,10 @@
             perto as novidades e promoções
         </p>
 
-        <BR></BR>
-
         <!-- Lista das redes sociais -->
         <ul class="social">
             <li class="insta">
-                <a href="https://www.instagram.com/localsurff1/" target="_blank">
+                <a href="https://www.instagram.com/localsurf.01/" target="_blank">
                     <img src="arroba-at-svgrepo-com.svg" alt="Instagram" width="20px">
                     <span class="social-text">localsurff1</span>
                 </a>
@@ -280,6 +279,8 @@
 
     <script src="fadeR4.js"></script>
     <script src="totop.js"></script>
+
+    <script src="images.js"></script>
 </body>
 
 </html>

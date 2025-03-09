@@ -830,7 +830,7 @@ footer {
 footer p {
     font-family: var(--font-family-primary);
     font-size: 1.5em;
-    margin-top: 40px;
+    margin-top: 0px;
 }
 
 
@@ -842,6 +842,7 @@ footer p {
     /* Espaçamento reduzido entre os itens */
     padding-top: 10px;
     letter-spacing: 2px;
+    padding-left: 0;
 }
 
 .social li {
@@ -876,7 +877,7 @@ footer p {
     /* Faz com que o parágrafo se comporte como um bloco em linha */
     position: relative;
     /* Necessário para aplicar a linha abaixo */
-    margin-top: 90px;
+    margin-top: 0;
     letter-spacing: 2px;
     /* Adiciona espaçamento entre as letras, se necessário */
     cursor: pointer;

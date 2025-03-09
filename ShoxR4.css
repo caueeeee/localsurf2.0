@@ -102,76 +102,65 @@ header {
     --box-shadow: rgb(220, 24, 24) 0px 2px 10px 0px;
 }
 
-
 @media screen and (max-width: 768px) {
     body {
         overflow-x: hidden !important;
     }
-
-    .produto{
-        max-width: 450px !important;
-    }
-
-    .infobuy{
-        .radio-input{
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .radio-input label{
-            width: 30px;
-            margin: 0 auto;
-        }
-
-        .valores{
-            font-size: 1em;
-            display: flex;
-            flex-wrap: wrap;
-            margin-inline: 20px;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .parcela{
-            width: 180px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .tamanhos{
-            width: 215px;
-            margin: 0 auto;
-        }
+    
+    .nome-produto{
+        justify-content: center;
+        font-size: 1.5em !important;
     }
 
     .avaliacao{
-        display: flex;
         flex-direction: column;
-        gap: 10px !important;
         align-items: center;
+        gap: 0px !important;
+        flex-wrap: wrap;
     }
 
-    .image-1{
-        display: flex;
-        margin: auto;
+    .valores{
+        gap: 0px !important;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
     }
-    .image-1 img{
-        max-width: 200px;
-        margin: auto;
+
+    .parcela{
+        margin: 0;
+        flex-wrap: wrap;
+    }
+
+    .tamanhos{
+        justify-content: center;
+    }
+
+    .radio-input{
+        justify-content: center;
+        gap: 10px !important;
+    }
+
+    .produto img {
+        max-width: 150px;
     }
 
     .detail-pictures{
-        display: flex;
-        align-items: center;
-        justify-content: center;
         flex-direction: column;
-        gap: 20px;
+        align-items: center;
     }
 
-    .produto .detail-pictures img{
-        max-width: 100px;
+    .detail-pictures img {
+        max-width: 130px;
+        display: flex;
     }
+
+    .picture-product{
+        display: flex;
+        justify-content: center;
+    }
+
+    
 
     nav {
         flex-direction: column;
@@ -203,20 +192,14 @@ header {
         font-size: 1.2em;
         margin-top: 20px;
     }
-
-    
 }
-
-
-
-
 
 nav {
     display: flex;
     justify-content: space-between;
     /* Distribui os itens do nav igualmente */
     align-items: center;
-    padding: 30px 20px 0px;
+    padding: 30px 20px 30px;
     /* Ajusta o espaçamento interno */
     font-family: var(--font-family-primary);
     width: 100%;
@@ -265,12 +248,6 @@ nav li:hover::after {
     /* Menor espaçamento entre os botões */
     /* Move os botões para a direita */
 }
-
-hr{
-    max-width: 70%;
-    height: 1px; 
-    border: none;/* Espessura da linha */
-    background-color: var(--vermelho);}
 
 /* Estilo do único botão */
 .botaoum {
@@ -414,7 +391,6 @@ footer p {
     /* Faz com que o parágrafo se comporte como um bloco em linha */
     position: relative;
     /* Necessário para aplicar a linha abaixo */
-    margin-top: 90px;
     letter-spacing: 2px;
     /* Adiciona espaçamento entre as letras, se necessário */
     cursor: pointer;
@@ -579,16 +555,13 @@ footer a {
 }
 
 .container {
-    
-
-
-    gap: 0;
     background-image: linear-gradient(to right, #a1a1a131, white 1%);
-    height: auto;
+    height: 140vh;
     width: auto;
     display: flex;
     justify-content: center;
     margin-top: 100px;
+    margin-inline: 100px;
     margin-bottom: 100px;
     border-radius: 15px;
     -webkit-box-shadow: 0px 10px 39px 0px rgba(62, 66, 66, 0.22);
@@ -597,53 +570,45 @@ footer a {
 }
 
 .produto {
-    width: 95%;
     background-color: #a1a1a131;
     border-radius: 15px;
 }
 
-.image-1{
-    display: flex;
-    justify-content: center;
-}
-
 .infobuy {
-    justify-content: center;
     position: relative;
-    flex-wrap: wrap;
     width: 100%;
 }
 
 .produto img {
-    width: 400px;
+    width: 350px;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 
 
 .nome-produto {
-    font-size: 2.0em;
+    display: flex;
+    font-size: 2.5em;
     font-family: Batangas;
     color: black;
-    width: 209px;
-    margin: 0 auto;
-    margin-top: 50px;
+    display: flex;
+    justify-content: center;
 }
 
 .avaliacao {
-    justify-content: center;
-    gap: 100px;
     display: flex;
+    gap: 50px;
+    margin-top: 10px;
     font-family: var(--font-family-primary);
     font-size: 1.3em;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .valores {
-    justify-content: center;
     font-family: var(--font-family-primary);
     font-size: 1.3em;
+    gap: 30px;
     display: flex;
-    gap: 50px;
+    justify-content: center;
 }
 
 .int {
@@ -656,10 +621,9 @@ footer a {
 }
 
 .parcela {
-    width: 300px;
-    margin: 0 auto;
     font-size: 1.3em;
     font-family: var(--font-family-primary);
+    text-align: center;
 }
 
 .tamanhos {
@@ -679,17 +643,22 @@ footer a {
 }
 
 .opcoes {
+    margin: 0 auto;
+    max-width: 500px;
     font-size: 1em;
+    display: block;
+    text-align: center;
 }
 
 .radio-input {
+    margin-bottom: 20px;
     font-family: var(--font-family-primary);
     display: flex;
     flex-direction: row;
     gap: 20px;
     color: white;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .radio-input input[type="radio"] {
@@ -797,17 +766,24 @@ footer a {
     transition: ease-in-out .2s;
 }
 
-.detail-pictures{
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-    cursor: pointer;
-}
-
 .detail-pictures img {
-    width: 130px;
+    width: 100px;
 }
 
 .detail-pictures img:hover {
     transform: scale(1.1);
+}
+
+.detail-pictures {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    gap: 30px;
+}
+
+hr{
+    width: 70%;
+    border: none;
+    height: 1px;
+    background-color: var(--vermelho-fundo);
 }
